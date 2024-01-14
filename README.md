@@ -31,4 +31,4 @@ All records and associated data are securely stored in the browser's local stora
 
 ## Deployment
 
-Experience the application live on [Netlify](https://651a39bbb441053ea51b3568--serene-arithmetic-94d9ab.netlify.app/).
+Experience the application live on [Netlify](https://lucky-mochi-eaba9d.netlify.app/).
