@@ -9,7 +9,7 @@ document.getElementById("statusFilter").addEventListener("change", function () {
   filterData();
   
 });
-// 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
+
 function saveRecordsToLocalStorage() {
   localStorage.setItem("records", JSON.stringify(records));
 }
@@ -193,6 +193,7 @@ function filterData() {
       : records.filter((record) => record.status === status);
   displayMatchingData(filteredRecords);
 }
+
 function displayData() {
   displayMatchingData(records);
 }

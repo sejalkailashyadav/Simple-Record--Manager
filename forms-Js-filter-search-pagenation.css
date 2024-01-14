@@ -2,16 +2,13 @@
 
 * {
   box-sizing: border-box;
-}
-
-* {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  font-family: math, Helvetica, sans-serif;
 }
 
 .container {
@@ -21,76 +18,110 @@ body {
   height: 100vh;
 }
 
+.form-container,
+.table-container {
+  width: 50%;
+  padding: 20px;
+}
+
 button {
   font-size: 1.5rem;
   padding: 1rem 3rem;
   color: #0a0000;
   text-transform: uppercase;
-}
-
-#searchbtn
-{
-  background-color: #ffffff;
-  color: black;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 17px;
-  padding: 8px;
-  text-transform: capitalize;
-  margin-bottom: 1rem;
-  margin-left: -7rem;
-  margin-right: 135px;
+}
+
+#searchid {
+  width: 100%; 
+  margin-bottom: 10px;
+  border-color: #7f81c7;
+}
+
+#statusFilter {
+  width: 100%; 
+  margin-bottom: 10px;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#searchbtn {
+  margin-top: -5px;  
+}
+
+#statusFilter {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd; 
+  border-radius: 5px; 
+  background-color: #d9e1ea; 
+  cursor: pointer;
+}
+
+#statusFilter option {
+  font-size: 16px;  
+}
+
+#statusFilter:hover {
+  border-color: #aaa;
+}
+
+#statusFilter::after {
+  content: "\25BC"; 
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+#statusFilter:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(146, 148, 248, 0.7);
 
 }
+
 .row {
   display: flex;
-  flex-wrap: inherit;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
+  padding: 10px;
 }
 
 .column {
-  width: 50%;
+  width: 100%;
   padding: 10px;
-  margin: 50px;
-  height: 1000px;
+  margin: 10px;
 }
 
 #myForm {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: -1px -3px 10px rgb(200 119 235 / 30%);
-  width: 60%;
-  height: 66%;
-  padding: 84px 100px 37px 103px;
-  margin: 136px 19px 59px 92px;
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
 }
 
 h1 {
   font-size: 28px;
-  padding: -1px 37px -19px 73px;
-  margin: 28px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-#myForm input {
+#myForm input[type="text"],
+#myForm textarea{
   display: block;
   padding: 16px;
-  margin: 2px 42px 41px 0px;
+  margin-bottom: 20px;
   width: 100%;
   box-sizing: border-box;
-  border-radius: 7px solid white;
-  box-shadow: -1px -3px 10px rgb(185 52 243 / 30%);
-}
-
-#myForm textarea {
-  display: block;
-  padding: 16px;
-  margin: 2px 42px 41px 0px;
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 7px solid white;
+  border: 2px solid #fff;
+  border-radius: 7px;
   box-shadow: -1px -3px 10px rgb(185 52 243 / 30%);
 }
 
@@ -98,9 +129,8 @@ th,
 td {
   text-align: left;
   word-break: break-all;
-  width: 276px;
-  height: 100%;
   font-size: 15px;
+  padding: 15px 10px;
 }
 
 tr:nth-child(even) {
@@ -109,28 +139,52 @@ tr:nth-child(even) {
 
 #status_div {
   display: flex;
-  align-items: inherit;
-  justify-content: inherit;
-  padding: 10px;
+  margin-bottom: 20px;
   flex-direction: row-reverse;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+#myForm #status_div input[type="radio"] {
+  display: inline-block;
+  margin-bottom: 10px;
+
+}
+
+#status_label {
+  margin-right: 10px;  
+}
+
+#status_active,
+#status_inactive {
+  margin-right: 5px;  
 }
 
 #submit,
-#view {
+#view,
+#records-btn {
   text-decoration: none;
   border: 1px solid rgb(146, 148, 248);
   position: relative;
   overflow: hidden;
-  margin: 4px 45px 29px 60px;
+  margin: 10px;
   border-radius: 10px;
-  padding: 13px 20px;
+  padding: 16px 30px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-#submit:hover {
+#submit:hover,
+#view:hover,
+#records-btn:hover {
   box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
 }
 
-#submit:before {
+#submit:before,
+#view:before,
+#records-btn:before {
   content: "";
   position: absolute;
   top: 0;
@@ -146,134 +200,82 @@ tr:nth-child(even) {
   transition: all 650ms;
 }
 
-.container {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  width: 400px;
-  padding: 30px 40px;
-}
-
-.container h1 {
-  padding: 40px 0px;
-  font-size: 28px;
-  text-align: center;
-}
-
-.input {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-#myForm label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-#myForm input textarea {
-  display: block;
-  padding: 16px;
-  margin: 10px 20px 30px 40px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.input small {
-  display: block;
-  color: #e74c3c;
-  font-weight: bold;
-  font-size: 11px;
-  padding-top: 3px;
-  visibility: hidden;
-}
-
-.input.success input {
-  border: 2px solid #2ecc71;
-}
-
-.input.error input {
-  border: 2px solid #e74c3c;
-}
-
-.input.error small {
-  visibility: visible;
-}
-
-#submit:hover:before {
+#submit:hover:before,
+#view:hover:before,
+#records-btn:hover:before {
   left: 100%;
 }
 
-#records-btn {
-  text-decoration: none;
+#pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
   border: 1px solid rgb(146, 148, 248);
-  position: relative;
-  overflow: hidden;
-  margin: 26px 29px 29px 60px;
-  border-radius: 10px;
-  padding: 16px 30px;
-  font-size: 12px;
-}
-#pagenationId{    font-size: 1.5rem;
-    padding: 0rem 1rem;
-    color: rgb(10, 0, 0);
-    text-transform: uppercase;
-  }
-table {
-  width: 850px;
-  border-collapse: collapse;
-  margin: 50px auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 12px;
-}
-
-th {
-  background: rgb(146, 148, 248);
-  color: #0c0202;
-  font-weight: bold;
-  border-bottom: 2px solid rgb(146, 148, 248);
-}
-
-td,
-th {
-  padding: 30px 10px;
-  font-size: 18px;
-  text-align: center;
-}
-
-td {
-  padding: 19px 10px;
-  text-align: left;
-  border: black;
-  font-size: 18px;
-  text-align: center;
-}
-input[type=search]{
-  width: 400px;
-  height: 40px;
-  font-size: 16px;
-  padding: 0px 20px 0px 40px;
-  border-radius: 40px;
-  outline: none;
-  border: solid gray 2px;
-  }
-#statusFilter 
-  {
-    text-align: center;
-    font-size: 21px;
-    background: #d3d3f5;
-    padding: 8px;
-  }
-  #pagination button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    border-radius: 3px;
-    border: 1px solid rgb(146, 148, 248);
-    cursor: pointer;
-    transition: background 0.3s;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 #pagination button:hover {
-    background: rgb(146, 148, 248);
-    color: #fff;
+  background: rgb(146, 148, 248);
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+}
+
+input[type=search] {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 40px;
+  outline: none;
+  border: solid gray 2px;
+}
+#pagenationId {
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+  color: rgb(10, 0, 0);
+  text-transform: uppercase;
+}
+#pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid rgb(146, 148, 248);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+#pagination button:hover {
+  background: rgb(146, 148, 248);
+  color: #fff;
+}
+
+#pagination button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(146, 148, 248, 0.7);
+}
+
+#pagination button:disabled {
+  background: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+#pagenationId {
+  font-size: 1rem;
+  color: rgb(10, 0, 0);
+  text-transform: uppercase;
 }
