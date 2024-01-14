@@ -16,6 +16,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 10px;
+  padding: 10px;
 }
 
 .form-container,
@@ -84,6 +86,11 @@ button {
 
 }
 
+h1 {
+  color: rgb(125, 125, 188);
+  text-align: center;
+  padding-top: 30px;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
