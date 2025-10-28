@@ -1,6 +1,6 @@
 # Simple Record Manager
 
-A lightweight, web-based application designed for managing, viewing, editing, deleting, and searching records with pagination support.
+A lightweight, web-based application designed for managing, viewing, editing, deleting, and searching records with pagination support.s
 
 ## Features
 
