@@ -3,7 +3,6 @@
 A lightweight, web-based application designed for managing, viewing, editing, deleting, and searching records with pagination support.s
 
 ## Features
-
 - **Add Record**: Enables users to input new records, specifying the location, description, and status.
 - **View Records**: Lists all records with integrated pagination.
 - **Search Functionality**: Allows filtering of records based on search criteria.
