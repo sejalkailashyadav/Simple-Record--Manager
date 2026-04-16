@@ -1,4 +1,4 @@
-# Simple Record Manager
+# Record Manager
 
 A lightweight, web-based application designed for managing, viewing, editing, deleting, and searching records with pagination support.
 
@@ -12,7 +12,6 @@ A lightweight, web-based application designed for managing, viewing, editing, de
 - **Pagination**: Efficient division of records into navigable pages.
 
 ## Tech Stack
-
 - **HTML5**: Foundation of the application's structure.
 - **CSS3**: Adds styling and design elements to the interface.
 - **JavaScript**: Powers the application's dynamic functionality.
