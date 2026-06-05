@@ -16,9 +16,5 @@ A lightweight, web-based application designed for managing, viewing, editing, de
 - **SweetAlert2**: Integrated for intuitive pop-up alerts.
 ## Data Storage
 All records and associated data are securely stored in the browser's local storage. This method ensures that data remains persistent between sessions, allowing for a seamless user experience without needing a backend database. Note: If you clear your browser's local storage, all saved records will be lost.
-## How to Run this 
-1. Clone the repository or download the provided zip file.
-2. Navigate to the directory and open the `index.html` file in a web browser.
-3. You're all set! Begin managing your records.
 ## Deployment
 Experience the application live on [Simple Record Manager](https://lucky-mochi-eaba9d.netlify.app/).
