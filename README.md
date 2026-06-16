@@ -14,7 +14,6 @@ A lightweight, web-based application designed for managing, viewing, editing, de
 - **CSS3**: Adds styling and design elements to the interface.
 - **JavaScript**: Powers the application's dynamic functionality.
 - **SweetAlert2**: Integrated for intuitive pop-up alerts.
-## Data Storage
-All records and associated data are securely stored in the browser's local storage. This method ensures that data remains persistent between sessions, allowing for a seamless user experience without needing a backend database. Note: If you clear your browser's local storage, all saved records will be lost.
+
 ## Deployment
 Experience the application live on [Simple Record Manager](https://lucky-mochi-eaba9d.netlify.app/).
