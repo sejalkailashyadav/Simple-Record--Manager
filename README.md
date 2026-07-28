@@ -9,11 +9,7 @@ A lightweight, web-based application designed for managing, viewing, editing, de
 - **Edit & Delete**: Offers the flexibility to modify or remove any record.
 - **Sorting**: Users can sort records based on different columns.
 - **Pagination**: Efficient division of records into navigable pages.
-## Tech Stack
-- **HTML5**: Foundation of the application's structure.
-- **CSS3**: Adds styling and design elements to the interface.
-- **JavaScript**: Powers the application's dynamic functionality.
-- **SweetAlert2**: Integrated for intuitive pop-up alerts.
+
 
 ## Deployment
 Experience the application live on [Simple Record Manager](https://lucky-mochi-eaba9d.netlify.app/).
